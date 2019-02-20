@@ -13,9 +13,9 @@ public class SpeechBubble : MonoBehaviour
 
     public RectTransform positioner;
     public Vector2 playerPosition;
-    public Vector2 playerDisplacement;
+    public Vector2 playerTextDisplacement;
     public Vector2 otherPosition;
-    public Vector2 otherDisplacement;
+    public Vector2 otherTextDisplacement;
 
     public Color playerColor;
     public Color otherColor;
@@ -26,7 +26,7 @@ public class SpeechBubble : MonoBehaviour
     [HideInInspector]
     public float height;
 
-    public Vector2 displacement;
+    public Vector2 textDisplacement;
 
     //[HideInInspector]
     public bool isPlayerSpeech = true;
@@ -63,7 +63,7 @@ public class SpeechBubble : MonoBehaviour
         bgImage.rectTransform.sizeDelta = tmp.textBounds.extents * 2 + new Vector3(paddingX.x + paddingX.y, paddingY.x + paddingY.y);
         bgImage.rectTransform.localPosition = new Vector3(tmp.textBounds.extents.x * -alignment, tmp.textBounds.extents.y) + new Vector3((paddingX.x + paddingX.y) * -alignment * 0.5f, (paddingY.x + paddingY.y) * 0.5f);
         transform.sizeDelta = tmp.textBounds.extents * 2 + new Vector3(paddingX.x + paddingX.y, paddingY.x + paddingY.y);
-        tmp.rectTransform.localPosition = displacement + Vector2.right * (tmp.textBounds.extents.x + 0.5f * (paddingX.x - paddingX.y)) * alignment + Vector2.up * (paddingY.x - paddingY.y) * 0.5f;
+        tmp.rectTransform.localPosition = textDisplacement + Vector2.right * (tmp.textBounds.extents.x + 0.5f * (paddingX.x - paddingX.y)) * alignment + Vector2.up * (paddingY.x - paddingY.y) * 0.5f;
     }
 
     public void SetCharacter(bool _isPlayerSpeech)
@@ -74,17 +74,16 @@ public class SpeechBubble : MonoBehaviour
         {
             bgImage.color = playerColor;
             tmp.alignment = TextAlignmentOptions.Right;
-            displacement = playerDisplacement;
-            playerPosition = Vector3.right * MainCamera.topRight.x;
-            positioner.localPosition = Vector3.right * MainCamera.width *0.5f;
+            textDisplacement = playerTextDisplacement;
+            positioner.localPosition = Vector2.right * ChatScreen.rect.sizeDelta.x * 0.5f + playerPosition;
             alignment = 1;
         }
         else
         {
             bgImage.color = otherColor;
             tmp.alignment = TextAlignmentOptions.Left;
-            displacement = otherDisplacement;
-            positioner.localPosition = otherPosition;
+            textDisplacement = otherTextDisplacement;
+            positioner.localPosition = Vector2.left * ChatScreen.rect.sizeDelta.x * 0.5f + otherPosition;
             alignment = -1;
         }
     }
