@@ -131,9 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae8b7b84b116494da8b9edd59c2106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   transform: {fileID: 0}
-  index: 0
+  collider: {fileID: 0}
+  pongManager: {fileID: 0}
+  radius: 0
+  id: 0
   speed: 3
   moveDir: {x: 1, y: 1}
   initialFadeDelay: 5
   fadeDur: 2
+  desummonDuration: 2
+  desummonScaleRatio: 2
+  initialScale: {x: 0, y: 0, z: 0}
