@@ -33,10 +33,11 @@ public class PongManager : MonoBehaviour
         ControlEnemyPaddle();
     }
 
-    public void SpawnBall(int id, Color color)
+    public void SpawnBall(int id, string qString, Color color)
     {
         PongBall b = Instantiate(ballPrefab);
         b.id = id;
+        b.qString = qString;
         b.GetComponent<SpriteRenderer>().color = color;
         b.pongManager = this;
         balls.Add(b);

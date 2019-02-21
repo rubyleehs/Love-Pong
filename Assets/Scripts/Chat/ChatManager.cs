@@ -61,7 +61,7 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
             string reply = "";
             for (int i = 0; i < dialog.current.answers.Count; i++)
             {
-                GameManager.pongManager.SpawnBall(i, dialog.current.answers[i].color);
+                GameManager.pongManager.SpawnBall(i, dialog.current.answers[i].text, dialog.current.answers[i].color);
                 reply += " | " + i + " : " + dialog.current.answers[i].text + "/n";
             }
             Debug.Log(reply);

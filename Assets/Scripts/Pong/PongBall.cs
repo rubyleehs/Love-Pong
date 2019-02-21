@@ -13,7 +13,10 @@ public class PongBall : MonoBehaviour
     [HideInInspector]
     public PongManager pongManager;
     public float radius;
+    
     public int id;
+    [HideInInspector]
+    public string qString;
 
     public float speed = 3;
     public Vector2 moveDir = Vector2.one;
@@ -108,7 +111,11 @@ public class PongBall : MonoBehaviour
     {
         if (timeSinceLastCollision > 0) timeSinceLastCollision = 0;
 
-        if (collision.transform.CompareTag("Paddle")) moveDir = (transform.position - collision.transform.position).normalized;
+        if (collision.transform.CompareTag("Paddle"))
+        {
+            moveDir = (transform.position - collision.transform.position).normalized;
+            collision.transform.parent.parent.GetComponent<PongPaddle>().Set(qString, initialColor);
+        }
         else moveDir = Vector2.Reflect(moveDir, collision.GetContact(0).normal);
     }
 
