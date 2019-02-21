@@ -10,8 +10,9 @@ namespace Dialogue
     {
         [Input] public Connection input;
         [Output] public Connection output;
-        [TextArea] public string text;
         public List<ChatMessage> chatMessages = new List<ChatMessage>();
+
+        public bool pickRandomAnswer;
         public List<Answer> answers = new List<Answer>();
 
         [System.Serializable]
@@ -42,7 +43,10 @@ namespace Dialogue
                 port = GetOutputPort("answers " + index);
             }
 
-            if (port == null) return;
+            if (port == null)
+            {
+                GameManager.chatManager.End(false);
+            }
             for (int i = 0; i < port.ConnectionCount; i++)
             {
                 NodePort connection = port.GetConnection(i);

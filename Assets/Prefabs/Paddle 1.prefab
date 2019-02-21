@@ -55,7 +55,7 @@ MonoBehaviour:
   tmp: {fileID: 306684495012556519}
   col: {fileID: 306684494880319689}
   image: {fileID: 306684494880319690}
-  speed: 5
+  speed: 2
   speedMultiplier: 1
 --- !u!114 &306684494227959355
 MonoBehaviour:

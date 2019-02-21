@@ -15,6 +15,8 @@ namespace Dialogue {
             if (dialogue.answers.Count == 0) NodeEditorGUILayout.PortField(target.GetOutputPort("output"), GUILayout.Width(100));
             GUILayout.EndHorizontal();
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("chatMessages"));
+            EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("pickRandomAnswer"));
             NodeEditorGUILayout.InstancePortList("answers", typeof(Chat.Answer), serializedObject, NodePort.IO.Output, Node.ConnectionType.Override);
         }
 

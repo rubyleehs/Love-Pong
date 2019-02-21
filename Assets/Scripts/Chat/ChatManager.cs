@@ -7,6 +7,7 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
     public class ChatManager : MonoBehaviour
     {
         public GameObject speechBubbleGO;
+        public GameObject notificationGO;
         public Transform speechParent;
 
         public DialogueGraph[] dialogList;
@@ -32,7 +33,6 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
 
         private IEnumerator _Play(Chat chat)
         {
-            Debug.Log(chat);
             for (int i = 0; i < chat.chatMessages.Count; i++)
             {
                 var msg = chat.chatMessages[i];
@@ -57,6 +57,11 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
 
         private void SummonQuestion()
         {
+            if(dialog.current.pickRandomAnswer || dialog.current.answers == null || dialog.current.answers.Count <= 1)
+            {
+                dialog.current.AnswerQuestion(Random.Range(0, dialog.current.answers.Count));
+                return;
+            }
             isExpectingAnswer = true;
             string reply = "";
             for (int i = 0; i < dialog.current.answers.Count; i++)
@@ -73,6 +78,11 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
             s.transform.SetAsFirstSibling();
             s.SetCharacter(isPlayer);
             s.SetText(text);
+        }
+
+        public void End(bool isSucess)
+        {
+
         }
     }
 }
