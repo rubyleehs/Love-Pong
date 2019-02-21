@@ -46,6 +46,8 @@ public class PongManager : MonoBehaviour
     {
         if (playerPaddle == null) playerPaddle = Instantiate(paddlePrefab,  Vector2.up * (MainCamera.bottomLeft.y + paddlePadding), Quaternion.identity, pongParent);
         if (enemyPaddle == null) enemyPaddle = Instantiate(paddlePrefab,  Vector2.up * (MainCamera.topRight.y - paddlePadding), Quaternion.identity, pongParent);
+
+        //playerPaddle.transform.position = Vector2.up * (MainCamera.bottomLeft.y + paddlePadding);
     }
 
     public void HandlePlayerInput()

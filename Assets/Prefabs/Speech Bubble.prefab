@@ -33,7 +33,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -24.596294}
+  m_AnchoredPosition: {x: -125, y: -44.596294}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6928832214946421304
@@ -260,9 +260,9 @@ MonoBehaviour:
   bgImage: {fileID: 9108245122319022014}
   tmp: {fileID: 3742602989033698550}
   positioner: {fileID: 3818753749429187621}
-  playerPosition: {x: -10, y: -50}
+  playerPosition: {x: -10, y: -70}
   playerTextDisplacement: {x: 0, y: 0}
-  otherPosition: {x: 10, y: -50}
+  otherPosition: {x: 10, y: -70}
   otherTextDisplacement: {x: 200, y: 0}
   playerColor: {r: 0.12459949, g: 0.754717, b: 0.16693944, a: 0.47058824}
   otherColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.50980395}
