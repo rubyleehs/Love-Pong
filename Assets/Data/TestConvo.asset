@@ -56,7 +56,50 @@ MonoBehaviour:
   - {fileID: 114716005185292674}
   - {fileID: 114834877740609076}
   - {fileID: 114113752483115512}
-  current: {fileID: 0}
+  - {fileID: 114052315107817304}
+  - {fileID: 114194749966569750}
+  - {fileID: 114140250747953920}
+  - {fileID: 114765715755617482}
+  - {fileID: 114541616723360312}
+  - {fileID: 114571177614429196}
+  - {fileID: 114043572499408668}
+  - {fileID: 114934306435792060}
+  - {fileID: 114125451290714810}
+  - {fileID: 114412739286914982}
+  - {fileID: 114639747892179524}
+  - {fileID: 114562567993093544}
+  - {fileID: 114493106800267304}
+  - {fileID: 114732818759293052}
+  - {fileID: 114159647987489348}
+  - {fileID: 114474342678591156}
+  - {fileID: 114960348336882612}
+  - {fileID: 114710228616142176}
+  - {fileID: 114382454916756862}
+  - {fileID: 114495215358461134}
+  - {fileID: 114606946279044574}
+  - {fileID: 114588946854313878}
+  - {fileID: 114091206727739258}
+  - {fileID: 114983397114114396}
+  - {fileID: 114993460129625536}
+  - {fileID: 114865920218289506}
+  - {fileID: 114437333695330340}
+  - {fileID: 114026834535851964}
+  - {fileID: 114244481503183962}
+  - {fileID: 114259546283611294}
+  - {fileID: 114218131675502276}
+  - {fileID: 114749624924868738}
+  - {fileID: 114992123020781074}
+  - {fileID: 114033948041728296}
+  - {fileID: 114748714179887768}
+  - {fileID: 114128871498398056}
+  - {fileID: 114387212733532410}
+  - {fileID: 114658256937555702}
+  - {fileID: 114511948141430864}
+  - {fileID: 114533992490263670}
+  - {fileID: 114607989184298614}
+  - {fileID: 114884554604574068}
+  - {fileID: 114035017069097248}
+  current: {fileID: 114472875245622164}
 --- !u!114 &114021881273335292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +137,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114079737089619826}
+        node: {fileID: 114467653695316230}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -107,6 +150,61 @@ MonoBehaviour:
   - text: Been pretty free recently
     isPlayer: 1
     delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114026834535851964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8072, y: 3096}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114026834535851964}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114865920218289506}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114437333695330340}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114244481503183962}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114218131675502276}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114026834535851964}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Welp
+    isPlayer: 0
+    delay: 5
   pickRandomAnswer: 0
   answers: []
 --- !u!114 &114029151091613190
@@ -167,6 +265,140 @@ MonoBehaviour:
     delay: 3
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114033948041728296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 1224}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114033948041728296}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114033948041728296}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114387212733532410}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I like to practice some form of performing art
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114035017069097248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9064, y: 1544}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 114035017069097248}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114533992490263670}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114035017069097248}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114035017069097248}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114658256937555702}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114035017069097248}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114511948141430864}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Not really
+    isPlayer: 1
+    delay: 3
+  - text: I just go wherever my friends go
+    isPlayer: 1
+    delay: 4
+  - text: Ohhh
+    isPlayer: 1
+    delay: 4
+  - text: Maybe we can go somehwere together too!
+    isPlayer: 0
+    delay: 6
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Sure"'
+    color: {r: 0.039215688, g: 0.75294125, b: 0.09411766, a: 1}
+  - text: '"Nah, I pass"'
+    color: {r: 0.87843144, g: 0.16862746, b: 0.16862746, a: 1}
 --- !u!114 &114040770130566528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +512,104 @@ MonoBehaviour:
     delay: 2.5
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114043572499408668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 664}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114043572499408668}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 5
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114043572499408668}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114765715755617482}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I'm a student
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114052315107817304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5992, y: 1128}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114052315107817304}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114467653695316230}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114052315107817304}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I see...
+    isPlayer: 0
+    delay: 3.5
+  - text: Well, good luck with whatever you are doing
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114054811475284396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,9 +686,6 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: output
-        node: {fileID: 114021881273335292}
-        reroutePoints: []
       - fieldName: answers 0
         node: {fileID: 114467653695316230}
         reroutePoints: []
@@ -399,7 +726,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 114113752483115512}
+        node: {fileID: 114992123020781074}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -432,6 +759,85 @@ MonoBehaviour:
     color: {r: 0.36063394, g: 0.8679245, b: 0.21698113, a: 1}
   - text: '"I rather not say"'
     color: {r: 0.7857709, g: 0.7924528, b: 0.16820934, a: 1}
+--- !u!114 &114091206727739258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10952, y: -328}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 114091206727739258}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114606946279044574}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114588946854313878}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114091206727739258}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114091206727739258}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114993460129625536}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114091206727739258}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114983397114114396}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Coz I want you to be my sugar daddy ;)
+    isPlayer: 0
+    delay: 0
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Sure"'
+    color: {r: 0.9339623, g: 0.101326115, b: 0.101326115, a: 1}
+  - text: '"Haha"'
+    color: {r: 0.10196078, g: 0.93333334, b: 0.15419352, a: 1}
 --- !u!114 &114113752483115512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +851,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 7096, y: 616}
+  position: {x: 7096, y: 1032}
   ports:
     keys:
     - input
@@ -461,8 +867,14 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
-        node: {fileID: 114079737089619826}
+      - fieldName: output
+        node: {fileID: 114934306435792060}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114710228616142176}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114992123020781074}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -481,7 +893,10 @@ MonoBehaviour:
       _node: {fileID: 114113752483115512}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114128871498398056}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -490,7 +905,10 @@ MonoBehaviour:
       _node: {fileID: 114113752483115512}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114033948041728296}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -499,7 +917,10 @@ MonoBehaviour:
       _node: {fileID: 114113752483115512}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114748714179887768}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -508,7 +929,10 @@ MonoBehaviour:
       _node: {fileID: 114113752483115512}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114218131675502276}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -517,7 +941,10 @@ MonoBehaviour:
       _node: {fileID: 114113752483115512}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114749624924868738}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -526,15 +953,15 @@ MonoBehaviour:
   pickRandomAnswer: 0
   answers:
   - text: Sports
-    color: {r: 0, g: 0, b: 0, a: 0}
-  - text: Sports
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: 0.8207547, g: 0.26713243, b: 0.26713243, a: 1}
   - text: Performing Arts
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: 0.8608987, g: 0.8679245, b: 0.3234247, a: 1}
+  - text: Outdoor Recreational Activities
+    color: {r: 0.38501248, g: 0.7924528, b: 0.4217489, a: 1}
   - text: Tech-Related
-    color: {r: 0, g: 0, b: 0, a: 0}
-  - text: Reading / Solving Puzzles
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: 0.28248486, g: 0.43909928, b: 0.8679245, a: 1}
+  - text: 'Reading '
+    color: {r: 0.6010197, g: 0.24296904, b: 0.7924528, a: 1}
 --- !u!114 &114119518365893514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +1050,346 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
   - text: Lucky chance
     color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114125451290714810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: -72}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: input
+      _node: {fileID: 114125451290714810}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114125451290714810}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114125451290714810}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114412739286914982}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114125451290714810}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114412739286914982}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114125451290714810}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114562567993093544}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Don't really work
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers:
+  - text: Looking for job
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - text: Can't work
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - text: Already have enough
+    color: {r: 0.8679245, g: 0.8039886, b: 0.12691349, a: 1}
+--- !u!114 &114128871498398056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 936}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114128871498398056}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114128871498398056}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114533992490263670}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I like to do some sports with friends
+    isPlayer: 1
+    delay: 2.5
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114140250747953920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8424, y: 232}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: input
+      _node: {fileID: 114140250747953920}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114140250747953920}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114140250747953920}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114140250747953920}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114140250747953920}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114934306435792060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: It's a white collared job
+    isPlayer: 1
+    delay: 2
+  - text: Ooooooo
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 1
+  answers:
+  - text: $$
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - text: $$
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - text: Hobby
+    color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114159647987489348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9016, y: -536}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    - answers 3
+    values:
+    - _fieldName: input
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114493106800267304}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114474342678591156}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114474342678591156}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114960348336882612}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: 114159647987489348}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114710228616142176}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: You're retired?
+    isPlayer: 0
+    delay: 2
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Been a loonngg life"'
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - text: Early retirement
+    color: {r: 0.8773585, g: 0.33063388, b: 0.10346207, a: 1}
+  - text: People work for me
+    color: {r: 0.1966002, g: 0.38568106, b: 0.8867924, a: 1}
+  - text: Work isn't "work"
+    color: {r: 0.31351832, g: 0.8773585, b: 0.24417053, a: 1}
 --- !u!114 &114165379847310372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +1403,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6504, y: 792}
+  position: {x: 6520, y: 1368}
   ports:
     keys:
     - input
@@ -832,6 +1599,55 @@ MonoBehaviour:
     color: {r: 0.7647059, g: 0.26217374, b: 0.1490196, a: 1}
   - text: '"You are just so funny"'
     color: {r: 0.7647059, g: 0.26217374, b: 0.1490196, a: 1}
+--- !u!114 &114194749966569750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: -440}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114194749966569750}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114194749966569750}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I find hoes for my harem
+    isPlayer: 0
+    delay: 2
+  - text: '....'
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114207043723217308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +1676,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: answers 0
+        node: {fileID: 114993456869049026}
+        reroutePoints: []
+      - fieldName: answers 1
         node: {fileID: 114993456869049026}
         reroutePoints: []
       _direction: 0
@@ -935,6 +1754,58 @@ MonoBehaviour:
     color: {r: 0.1715023, g: 0.3034657, b: 0.7735849, a: 1}
   - text: Ask if you can meet up
     color: {r: 0.633856, g: 0.77254903, b: 0.172549, a: 1}
+--- !u!114 &114218131675502276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 1864}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114218131675502276}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114218131675502276}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114026834535851964}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I stare at a screen
+    isPlayer: 1
+    delay: 2
+  - text: It's great fun!
+    isPlayer: 1
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114219955934969784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,7 +1882,7 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: answers 1
+      - fieldName: answers 2
         node: {fileID: 114993456869049026}
         reroutePoints: []
       _direction: 0
@@ -1075,6 +1946,113 @@ MonoBehaviour:
     color: {r: 0.8867924, g: 0.88035387, b: 0.12967247, a: 1}
   - text: Been pretty free
     color: {r: 0.14159843, g: 0.8113208, b: 0.16327246, a: 1}
+--- !u!114 &114244481503183962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 2808}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114244481503183962}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114834877740609076}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114244481503183962}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114026834535851964}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I'm actually a secret agent
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114259546283611294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Victory
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8072, y: 2456}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114259546283611294}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114834877740609076}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114259546283611294}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Both actually
+    isPlayer: 1
+    delay: 1
+  - text: I'm a secret agent that in some countries would be considered a criminal
+    isPlayer: 1
+    delay: 3
+  - text: Not that you would ever find out
+    isPlayer: 1
+    delay: 5
+  - text: Mission accomplished. Nothing to report.
+    isPlayer: 0
+    delay: 4
+  - text: Thanks for your hard work. The clean-up crew will be right behind you
+    isPlayer: 1
+    delay: 4
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114276837564691712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +2446,256 @@ MonoBehaviour:
     delay: 1.5
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114382454916756862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9448, y: 872}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114382454916756862}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114382454916756862}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114934306435792060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Nah, not really
+    isPlayer: 1
+    delay: 1
+  - text: I say about average
+    isPlayer: 1
+    delay: 2.5
+  - text: Ooohhh Hahah. Got a bit curious there
+    isPlayer: 0
+    delay: 4
+  - text: Thought maybe I caught a lucky break ;)
+    isPlayer: 0
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114387212733532410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8072, y: 1768}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 114387212733532410}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114749624924868738}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114033948041728296}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114387212733532410}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114387212733532410}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114658256937555702}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114387212733532410}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114511948141430864}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Oh hey! Me too!
+    isPlayer: 0
+    delay: 3
+  - text: We are a pretty rare breed these days!
+    isPlayer: 0
+    delay: 3
+  - text: Or at least no one in my group likes it as much as I do
+    isPlayer: 0
+    delay: 5
+  - text: You wanna meet up?
+    isPlayer: 0
+    delay: 4
+  - text: I can talk all day about this tbh
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Sure!"'
+    color: {r: 0.044544328, g: 0.8584906, b: 0.1057058, a: 1}
+  - text: '"Nah, I pass"'
+    color: {r: 0.8773585, g: 0.16967781, b: 0.16967781, a: 1}
+--- !u!114 &114412739286914982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8008, y: 344}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114412739286914982}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114125451290714810}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 114125451290714810}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114541616723360312}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114412739286914982}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Oh. ok. I see...
+    isPlayer: 0
+    delay: 6.5
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114437333695330340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 2520}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114437333695330340}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114834877740609076}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114437333695330340}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114026834535851964}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I'm actually a criminal.
+    isPlayer: 1
+    delay: 1
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114449851748218090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,11 +2831,11 @@ MonoBehaviour:
   pickRandomAnswer: 0
   answers:
   - text: '"I like you!"'
-    color: {r: 0.8490566, g: 0.1481844, b: 0.72272325, a: 1}
+    color: {r: 0.8490566, g: 0.1481844, b: 0.72272325, a: 0.50980395}
   - text: '"<3"'
-    color: {r: 0.8207547, g: 0.17858371, b: 0.15873085, a: 1}
+    color: {r: 0.8207547, g: 0.17858371, b: 0.15873085, a: 0.50980395}
   - text: Say a cheesy line
-    color: {r: 0.7921569, g: 0.70943475, b: 0.09411762, a: 1}
+    color: {r: 0.7921569, g: 0.70943475, b: 0.09411762, a: 0.50980395}
 --- !u!114 &114467653695316230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1640,6 +2868,9 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: 114478779700719754}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114021881273335292}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1669,7 +2900,10 @@ MonoBehaviour:
       _node: {fileID: 114467653695316230}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114052315107817304}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1730,6 +2964,55 @@ MonoBehaviour:
     delay: 2
   pickRandomAnswer: 1
   answers: []
+--- !u!114 &114474342678591156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9512, y: -760}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114474342678591156}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114159647987489348}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 114159647987489348}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114474342678591156}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Haha
+    isPlayer: 0
+    delay: 6
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114478779700719754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1777,6 +3060,107 @@ MonoBehaviour:
   - text: Been pretty busy
     isPlayer: 1
     delay: 1
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114493106800267304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8552, y: -536}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114493106800267304}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114562567993093544}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114493106800267304}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114159647987489348}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: of working
+    isPlayer: 1
+    delay: 1
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114495215358461134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10504, y: 264}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114495215358461134}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114495215358461134}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: 'Nope haha '
+    isPlayer: 1
+    delay: 2
+  - text: I'm broke :(
+    isPlayer: 1
+    delay: 4
+  - text: Haha. Me too :(
+    isPlayer: 0
+    delay: 6
   pickRandomAnswer: 0
   answers: []
 --- !u!114 &114507434628520090
@@ -1831,6 +3215,286 @@ MonoBehaviour:
     delay: 3
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114511948141430864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9560, y: 2584}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114511948141430864}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114387212733532410}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 114884554604574068}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 114035017069097248}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114511948141430864}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Nah, I pass
+    isPlayer: 1
+    delay: 2
+  - text: Oh.. Ok...
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114533992490263670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8072, y: 1128}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: input
+      _node: {fileID: 114533992490263670}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114748714179887768}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114128871498398056}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114533992490263670}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114533992490263670}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114607989184298614}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114533992490263670}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114884554604574068}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114533992490263670}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114035017069097248}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Ooo? You didn't seem be the sporty kind of person
+    isPlayer: 0
+    delay: 3
+  - text: Haha
+    isPlayer: 0
+    delay: 2
+  - text: Do you workout?
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers:
+  - text: Everyday religiously
+    color: {r: 0.20250687, g: 0.7372549, b: 0.19215687, a: 1}
+  - text: Moderately
+    color: {r: 0.8301887, g: 0.8247605, b: 0.19188325, a: 1}
+  - text: Not really
+    color: {r: 0.2216981, g: 0.39838266, b: 0.8867924, a: 1}
+--- !u!114 &114541616723360312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 392}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114541616723360312}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114541616723360312}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114412739286914982}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: It's a blue collared job
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114562567993093544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8072, y: -360}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 114562567993093544}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114125451290714810}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114562567993093544}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114562567993093544}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114493106800267304}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114562567993093544}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114732818759293052}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Already have enough
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers:
+  - text: '"of working"'
+    color: {r: 0.4119935, g: 0.18155926, b: 0.754717, a: 0.972549}
+  - text: '"of $$$"'
+    color: {r: 0.17501779, g: 0.6509434, b: 0.20552589, a: 1}
 --- !u!114 &114564316125215930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,7 +3508,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 7096, y: 184}
+  position: {x: 7096, y: 152}
   ports:
     keys:
     - input
@@ -1854,6 +3518,7 @@ MonoBehaviour:
     - answers 2
     - answers 3
     - answers 4
+    - answers 5
     values:
     - _fieldName: input
       _node: {fileID: 114564316125215930}
@@ -1868,9 +3533,6 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: output
         node: {fileID: 114755922418661744}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: 114079737089619826}
         reroutePoints: []
       - fieldName: output
         node: {fileID: 114777835260048350}
@@ -1892,7 +3554,10 @@ MonoBehaviour:
       _node: {fileID: 114564316125215930}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114194749966569750}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1901,7 +3566,10 @@ MonoBehaviour:
       _node: {fileID: 114564316125215930}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114125451290714810}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1910,7 +3578,10 @@ MonoBehaviour:
       _node: {fileID: 114564316125215930}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114140250747953920}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1919,7 +3590,10 @@ MonoBehaviour:
       _node: {fileID: 114564316125215930}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114541616723360312}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1928,7 +3602,22 @@ MonoBehaviour:
       _node: {fileID: 114564316125215930}
       _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 114571177614429196}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 5
+      _node: {fileID: 114564316125215930}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114043572499408668}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
@@ -1938,14 +3627,65 @@ MonoBehaviour:
   answers:
   - text: '"I find hoes for my harem"'
     color: {r: 0.5630519, g: 0.6037736, b: 0.21359916, a: 1}
+  - text: Unemployed/Self-Employed
+    color: {r: 0.5630519, g: 0.6037736, b: 0.21359916, a: 1}
   - text: White Collared Job
     color: {r: 0.23764165, g: 0.754717, b: 0.11035956, a: 1}
   - text: Blue Collared Job
     color: {r: 0.23764165, g: 0.754717, b: 0.11035956, a: 1}
-  - text: Student/Pink Collared Job
+  - text: Pink Collared Job
+    color: {r: 0.2392157, g: 0.75294125, b: 0.10980393, a: 1}
+  - text: Student / Recent Graduate
     color: {r: 0.23764165, g: 0.754717, b: 0.11035956, a: 1}
-  - text: Unemployed
-    color: {r: 0.5630519, g: 0.6037736, b: 0.21359916, a: 1}
+--- !u!114 &114571177614429196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8008, y: 664}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114571177614429196}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 4
+        node: {fileID: 114564316125215930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114571177614429196}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114765715755617482}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: It's a pink collared job
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114585421690444450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,6 +3762,171 @@ MonoBehaviour:
     color: {r: 0.7647059, g: 0.30421382, b: 0.1490196, a: 1}
   - text: '"How''s life?"'
     color: {r: 0.25031152, g: 0.7075472, b: 0.32946, a: 1}
+--- !u!114 &114588946854313878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10504, y: -184}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114588946854313878}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114588946854313878}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114091206727739258}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Yeah, I say I'm pretty rich
+    isPlayer: 1
+    delay: 2
+  - text: Woah :O
+    isPlayer: 0
+    delay: 2
+  - text: Any chance you are looking for a sugar baby? :3
+    isPlayer: 0
+    delay: 5
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114606946279044574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10504, y: -616}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114606946279044574}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114606946279044574}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114091206727739258}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Richer than you think
+    isPlayer: 1
+    delay: 2
+  - text: Wowww :O
+    isPlayer: 0
+    delay: 3
+  - text: Are you offering? ;)
+    isPlayer: 0
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114607989184298614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8552, y: 984}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114607989184298614}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114533992490263670}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114607989184298614}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: 'Everyday. '
+    isPlayer: 1
+    delay: 2
+  - text: Can't be slacking off can I?
+    isPlayer: 1
+    delay: 4
+  - text: I workout at every opportunity I get
+    isPlayer: 1
+    delay: 3
+  - text: Oh wow. Haha
+    isPlayer: 1
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114609401961471622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,11 +4016,11 @@ MonoBehaviour:
   pickRandomAnswer: 0
   answers:
   - text: A body part
-    color: {r: 0.7647059, g: 0.30421382, b: 0.1490196, a: 1}
+    color: {r: 0.7647059, g: 0.30421382, b: 0.1490196, a: 0.50980395}
   - text: '"...I forgot"'
-    color: {r: 0.16794232, g: 0.3207547, b: 0.21483943, a: 1}
+    color: {r: 0.16794232, g: 0.3207547, b: 0.21483943, a: 0.50980395}
   - text: '"Your likability score"'
-    color: {r: 0.7921569, g: 0.70943475, b: 0.09411762, a: 1}
+    color: {r: 0.7921569, g: 0.70943475, b: 0.09411762, a: 0.50980395}
 --- !u!114 &114631086638263496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +4100,121 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
   - text: Thanks
     color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114639747892179524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9976, y: -72}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    - answers 3
+    values:
+    - _fieldName: input
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114140250747953920}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 114140250747953920}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114732818759293052}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114960348336882612}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114606946279044574}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114588946854313878}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114382454916756862}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: 114639747892179524}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114495215358461134}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Are you actually rich?
+    isPlayer: 0
+    delay: 0
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Richer than you think"'
+    color: {r: 0.8629189, g: 0.8773585, b: 0.19450872, a: 1}
+  - text: Agree
+    color: {r: 0.33521718, g: 0.8773585, b: 0.3491933, a: 1}
+  - text: Not really
+    color: {r: 0.21306513, g: 0.5838679, b: 0.7924528, a: 1}
+  - text: Nope, am poor
+    color: {r: 0.8679245, g: 0.5349911, b: 0.3234247, a: 1}
 --- !u!114 &114649406410159868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,6 +4270,122 @@ MonoBehaviour:
     delay: 1.5
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114658256937555702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Victory
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9560, y: 2232}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114658256937555702}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114387212733532410}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114884554604574068}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 114884554604574068}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 114035017069097248}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114658256937555702}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Sure! :)
+    isPlayer: 1
+    delay: 1
+  - text: Yayyy!
+    isPlayer: 0
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114710228616142176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9000, y: 1032}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114710228616142176}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: 114159647987489348}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114710228616142176}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Nah, I don't really think of my work as "Work"
+    isPlayer: 1
+    delay: 2
+  - text: It's my PASSION
+    isPlayer: 1
+    delay: 4
+  - text: Oh haha. Misunderstood what you meant there
+    isPlayer: 0
+    delay: 6
+  - text: What is it?
+    isPlayer: 0
+    delay: 2.5
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114716005185292674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +4399,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6360, y: 1384}
+  position: {x: 6408, y: 1912}
   ports:
     keys:
     - input
@@ -2315,7 +4451,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5608, y: -264}
+  position: {x: 5608, y: -280}
   ports:
     keys:
     - input
@@ -2375,6 +4511,156 @@ MonoBehaviour:
     color: {r: 0.8207547, g: 0.17858371, b: 0.15873085, a: 1}
   - text: Answer the question
     color: {r: 0.15686272, g: 0.81960785, b: 0.2366727, a: 1}
+--- !u!114 &114732818759293052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8552, y: -72}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114732818759293052}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114562567993093544}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114732818759293052}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: of $$$
+    isPlayer: 1
+    delay: 1
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114748714179887768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 1512}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114748714179887768}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114748714179887768}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114533992490263670}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I like to do some outdoor recreational activity
+    isPlayer: 1
+    delay: 3
+  - text: Breathe in the fresh air you know?
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114749624924868738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 2216}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114749624924868738}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 4
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114749624924868738}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114387212733532410}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I like to do a bit of reading :)
+    isPlayer: 1
+    delay: 2
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114755922418661744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,6 +4798,64 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
   - text: Compliment
     color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114765715755617482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8424, y: 664}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114765715755617482}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114043572499408668}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114571177614429196}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114765715755617482}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114934306435792060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Ohh
+    isPlayer: 0
+    delay: 3
+  - text: I see!
+    isPlayer: 0
+    delay: 1.5
+  - text: I'm the same as you! :D
+    isPlayer: 0
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114777835260048350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,11 +4994,15 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 7096, y: 1096}
+  position: {x: 7096, y: 1960}
   ports:
     keys:
     - input
     - output
+    - answers 0
+    - answers 1
+    - answers 2
+    - answers 3
     values:
     - _fieldName: input
       _node: {fileID: 114834877740609076}
@@ -2680,6 +5028,54 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114834877740609076}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114437333695330340}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114834877740609076}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114244481503183962}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114834877740609076}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114259546283611294}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: 114834877740609076}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114865920218289506}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
   chatMessages:
   - text: May I ask why?
     isPlayer: 0
@@ -2694,7 +5090,15 @@ MonoBehaviour:
     isPlayer: 0
     delay: 5
   pickRandomAnswer: 0
-  answers: []
+  answers:
+  - text: Criminal
+    color: {r: 0.9056604, g: 0.06407974, b: 0.06407974, a: 1}
+  - text: Secret Agent
+    color: {r: 0.09211465, g: 0.22800855, b: 0.8490566, a: 1}
+  - text: Both
+    color: {r: 0, g: 0.9529412, b: 0, a: 1}
+  - text: '"I don''t want to tell"'
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114862466612898892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2708,7 +5112,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5192, y: 184}
+  position: {x: 5192, y: 152}
   ports:
     keys:
     - input
@@ -2756,6 +5160,152 @@ MonoBehaviour:
     delay: 3
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114865920218289506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7592, y: 3096}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114865920218289506}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: 114834877740609076}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114865920218289506}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114026834535851964}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: I dont't want to tell
+    isPlayer: 1
+    delay: 1
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114884554604574068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8552, y: 1480}
+  ports:
+    keys:
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: input
+      _node: {fileID: 114884554604574068}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114533992490263670}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114884554604574068}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114658256937555702}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 114884554604574068}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114658256937555702}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 114884554604574068}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114511948141430864}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  chatMessages:
+  - text: Me too!
+    isPlayer: 0
+    delay: 2
+  - text: Though probably not as much as you
+    isPlayer: 0
+    delay: 3
+  - text: I don't want to become too muscle-y
+    isPlayer: 0
+    delay: 3
+  - text: Haha, that's true
+    isPlayer: 1
+    delay: 3
+  - text: Maybe sometime we can work out together!
+    isPlayer: 0
+    delay: 5
+  - text: Yeah, that sound fantastic :)
+    isPlayer: 1
+    delay: 4
+  - text: This weekend?
+    isPlayer: 0
+    delay: 3
+  pickRandomAnswer: 0
+  answers:
+  - text: '"Sure!"'
+    color: {r: 0.039215688, g: 0.75294125, b: 0.09411766, a: 1}
+  - text: '"Nah, I pass"'
+    color: {r: 0.87843144, g: 0.16862746, b: 0.16862746, a: 1}
 --- !u!114 &114889499621629130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,6 +5353,64 @@ MonoBehaviour:
   - text: '...I forgot'
     isPlayer: 1
     delay: 3
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114934306435792060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7096, y: 744}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114934306435792060}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114765715755617482}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: 114140250747953920}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114382454916756862}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 114983397114114396}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114934306435792060}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Any hobbies?
+    isPlayer: 0
+    delay: 2
   pickRandomAnswer: 0
   answers: []
 --- !u!114 &114947555595566858
@@ -2867,7 +5475,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5192, y: -264}
+  position: {x: 5192, y: -280}
   ports:
     keys:
     - input
@@ -2965,6 +5573,162 @@ MonoBehaviour:
     delay: 2.5
   pickRandomAnswer: 0
   answers: []
+--- !u!114 &114960348336882612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9512, y: -472}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114960348336882612}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 114159647987489348}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114960348336882612}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114639747892179524}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Nah. People work for me :)
+    isPlayer: 1
+    delay: 2
+  - text: Work smart not hard ;)
+    isPlayer: 1
+    delay: 4
+  - text: Ohhhh haha
+    isPlayer: 1
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114983397114114396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10504, y: 712}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114983397114114396}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114091206727739258}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114983397114114396}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114934306435792060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Haha
+    isPlayer: 1
+    delay: 1
+  pickRandomAnswer: 0
+  answers: []
+--- !u!114 &114992123020781074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6520, y: 856}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114992123020781074}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 114079737089619826}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114992123020781074}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114113752483115512}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Ehh, work is pretty boring
+    isPlayer: 1
+    delay: 3
+  - text: 'But when I am free '
+    isPlayer: 0
+    delay: 3
+  pickRandomAnswer: 0
+  answers: []
 --- !u!114 &114993456869049026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2985,6 +5749,7 @@ MonoBehaviour:
     - output
     - answers 0
     - answers 1
+    - answers 2
     values:
     - _fieldName: input
       _node: {fileID: 114993456869049026}
@@ -3034,6 +5799,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
+        node: {fileID: 114207043723217308}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 114993456869049026}
+      _typeQualifiedName: Dialogue.Chat+Answer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
         node: {fileID: 114227253567636472}
         reroutePoints: []
       _direction: 1
@@ -3048,5 +5825,59 @@ MonoBehaviour:
   answers:
   - text: Swamped with work
     color: {r: 0, g: 0, b: 0, a: 0}
+  - text: Swamped with work
+    color: {r: 0, g: 0, b: 0, a: 0}
   - text: You?
     color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114993460129625536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Victory
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 11496, y: -152}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 114993460129625536}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 114091206727739258}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 114993460129625536}
+      _typeQualifiedName: Dialogue.DialogueBaseNode+Connection, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  chatMessages:
+  - text: Sure
+    isPlayer: 1
+    delay: 2
+  - text: Want to meet up later?
+    isPlayer: 1
+    delay: 3
+  - text: Yes daddy ;)
+    isPlayer: 0
+    delay: 4
+  pickRandomAnswer: 0
+  answers: []
