@@ -94,7 +94,7 @@ public class PongBall : MonoBehaviour
 
         if (transform.position.y < MainCamera.bottomLeft.y)
         {
-            //GameOver
+            StartCoroutine(Desummon(true));
         }
         else if(transform.position.y > MainCamera.topRight.y)
         {
@@ -115,8 +115,16 @@ public class PongBall : MonoBehaviour
         {
             moveDir = (transform.position - collision.transform.position).normalized;
             collision.transform.parent.parent.GetComponent<PongPaddle>().Set(qString, initialColor);
+            speed *= 1.085f;
         }
-        else moveDir = Vector2.Reflect(moveDir, collision.GetContact(0).normal);
+        else
+        {
+            float avgSpeed = (collision.transform.GetComponent<PongBall>().speed + speed) * 0.5f;
+            speed = avgSpeed;
+            moveDir = Vector2.Reflect(moveDir, collision.GetContact(0).normal);
+        }
+
+        moveDir = moveDir.normalized;
     }
 
     public IEnumerator Desummon(bool showAnimation)
@@ -145,5 +153,6 @@ public class PongBall : MonoBehaviour
         }
 
         this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }

@@ -8,13 +8,14 @@ public class PongManager : MonoBehaviour
     public PongBall ballPrefab;
     public PongPaddle paddlePrefab;
     public Transform pongParent;
+    public Transform pongBallSpawn;
 
     [Header("Stats")]
     public float paddlePadding;
 
     private List<PongBall> balls = new List<PongBall>();
-    private PongPaddle playerPaddle;
-    private PongPaddle enemyPaddle;
+    public PongPaddle playerPaddle;
+    public PongPaddle enemyPaddle;
 
     [Header("Animation")]
     public float absorbBallMoveSpeed = 3;
@@ -35,10 +36,12 @@ public class PongManager : MonoBehaviour
 
     public void SpawnBall(int id, string qString, Color color)
     {
-        PongBall b = Instantiate(ballPrefab);
+        PongBall b = Instantiate(ballPrefab,pongBallSpawn.transform.position,Quaternion.identity);
         b.id = id;
         b.qString = qString;
         b.GetComponent<SpriteRenderer>().color = color;
+        b.moveDir = Random.insideUnitCircle.normalized;
+        
         b.pongManager = this;
         balls.Add(b);
     }
@@ -48,7 +51,8 @@ public class PongManager : MonoBehaviour
         if (playerPaddle == null) playerPaddle = Instantiate(paddlePrefab,  Vector2.up * (MainCamera.bottomLeft.y + paddlePadding), Quaternion.identity, pongParent);
         if (enemyPaddle == null) enemyPaddle = Instantiate(paddlePrefab,  Vector2.up * (MainCamera.topRight.y - paddlePadding), Quaternion.identity, pongParent);
 
-        //playerPaddle.transform.position = Vector2.up * (MainCamera.bottomLeft.y + paddlePadding);
+        playerPaddle.transform.position = Vector2.up * (MainCamera.bottomLeft.y + paddlePadding);
+        enemyPaddle.transform.position = Vector2.up * (MainCamera.topRight.y - paddlePadding);
     }
 
     public void HandlePlayerInput()
@@ -61,12 +65,13 @@ public class PongManager : MonoBehaviour
         if (balls.Count == 0) return;
         int targetIndex = 0;
         
-        for (int i = 1; i < balls.Count; i++)
+        for (int i = 0; i < balls.Count; i++)
         {
             if(balls[i] == null)
             {
                 balls.RemoveAt(i);
                 i--;
+                continue;
             }
 
             if(balls[i].transform.position.y > balls[targetIndex].transform.position.y)
@@ -75,13 +80,17 @@ public class PongManager : MonoBehaviour
             }
         }
 
+        if (balls.Count == 0) return;
         PongBall target = balls[targetIndex];
         if (target != null)
         {
-            enemyPaddle.Move(Vector3.right * (target.transform.position - enemyPaddle.transform.position).x);
+            float dx = target.transform.position.x - enemyPaddle.transform.position.x;
+            if (dx * dx > 0.35f)
+            {
+                enemyPaddle.Move(Vector3.right * dx);
+            }
         }
     }
-
     public IEnumerator Answer(PongBall ball)
     {
         if (!GameManager.chatManager.isExpectingAnswer) yield break;

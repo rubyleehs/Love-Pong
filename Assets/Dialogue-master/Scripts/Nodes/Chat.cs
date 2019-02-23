@@ -32,6 +32,7 @@ namespace Dialogue
 
         public void AnswerQuestion(int index)
         {
+            Debug.Log(index);
             NodePort port = null;
             if (answers.Count == 0)
             {
@@ -46,6 +47,7 @@ namespace Dialogue
             if (port == null)
             {
                 GameManager.chatManager.End(false);
+                return;
             }
             for (int i = 0; i < port.ConnectionCount; i++)
             {

@@ -13,6 +13,8 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
         public DialogueGraph[] dialogList;
         public static DialogueGraph dialog;
 
+        public float minChatBubbleDistToTop;
+
         private static IEnumerator currentlyPlaying;
         [HideInInspector]
         public List<SpeechBubble> speechBubbles;
@@ -51,15 +53,28 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
 
         public void Answer(int index)
         {
+            Debug.Log(index);
             dialog.AnswerQuestion(index);
             Play(dialog.current);
         }
 
         private void SummonQuestion()
         {
-            if(dialog.current.pickRandomAnswer || dialog.current.answers == null || dialog.current.answers.Count <= 1)
+            if (dialog.current.name == "End")
             {
-                dialog.current.AnswerQuestion(Random.Range(0, dialog.current.answers.Count));
+                End(false);
+                return;
+            }
+            else if (dialog.current.name == "Victory")
+            {
+                End(true);
+                return;
+            }
+            if (dialog.current.pickRandomAnswer || dialog.current.answers == null || dialog.current.answers.Count <= 1)
+            {
+                int randIndex = Random.Range(0, dialog.current.answers.Count);
+                Answer(randIndex);
+                
                 return;
             }
             isExpectingAnswer = true;
@@ -78,11 +93,17 @@ namespace Dialogue//the thing is looping non stop coz the ball is always behind 
             s.transform.SetAsFirstSibling();
             s.SetCharacter(isPlayer);
             s.SetText(text);
+            Transform temp = speechParent.GetChild(speechParent.childCount - 1).transform;
+            Debug.Log((temp.position.y + temp.localScale.y)+ " || " + (MainCamera.topRight.y - minChatBubbleDistToTop));
+            if (temp.position.y + temp.localScale.y > MainCamera.topRight.y - minChatBubbleDistToTop) 
+            {
+                Destroy(temp.gameObject);
+            }
         }
 
         public void End(bool isSucess)
         {
-
+            Debug.Log("End_Reached");
         }
     }
 }
